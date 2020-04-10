@@ -20,10 +20,15 @@ class UserInfoController: UIViewController {
     }
   }
   
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(true)
+    loadTableView()
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.dataSource = self
-    loadTableView()
+//    loadTableView()
   }
   
   private func loadTableView() {

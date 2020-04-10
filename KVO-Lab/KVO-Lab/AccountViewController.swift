@@ -48,6 +48,8 @@ class AccountViewController: UIViewController {
     let newWallet = (thisUser.walletAmount - value)
     User.shared.updateWallet(user: thisUser, newValue: newWallet)
     updateUI()
+//    dismiss(animated: true)
+
     
   }
   
@@ -63,6 +65,7 @@ class AccountViewController: UIViewController {
     User.shared.updateWallet(user: thisUser, newValue: newWallet)
     updateUI()
     
+//    dismiss(animated: true)
   }
   
   
