@@ -51,6 +51,89 @@
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="114.50892857142857"/>
         </scene>
+        <!--Account View Controller-->
+        <scene sceneID="sjf-0P-Hvp">
+            <objects>
+                <viewController storyboardIdentifier="AccountViewController" id="Ctf-Ku-GQu" customClass="AccountViewController" customModule="KVO_Lab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="znf-qi-xng">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNB-oG-UPL">
+                                <rect key="frame" x="20" y="84" width="374" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="lHc-T1-aU2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Balance Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNC-9s-zdw">
+                                <rect key="frame" x="20" y="139" width="374" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="7GB-p2-Dvh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="255" translatesAutoresizingMaskIntoConstraints="NO" id="8vt-x1-tzV">
+                                <rect key="frame" x="20" y="394" width="374" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hya-0K-CMN">
+                                        <rect key="frame" x="0.0" y="0.0" width="66" height="45"/>
+                                        <state key="normal" title="Withdraw"/>
+                                        <connections>
+                                            <action selector="withdrawalButtonBressed:" destination="Ctf-Ku-GQu" eventType="touchUpInside" id="FcC-9H-Tjv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fi-IC-9z1">
+                                        <rect key="frame" x="321" y="0.0" width="53" height="45"/>
+                                        <state key="normal" title="Deposit"/>
+                                        <connections>
+                                            <action selector="depositButtonPressed:" destination="Ctf-Ku-GQu" eventType="touchUpInside" id="J5v-MI-wVx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="tXM-VL-09y"/>
+                                </constraints>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="46L-3Z-YJp">
+                                <rect key="frame" x="132" y="260" width="150" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="z5K-pf-JxI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Eph-Aa-bWw" firstAttribute="trailing" secondItem="8vt-x1-tzV" secondAttribute="trailing" constant="20" id="4a2-ha-RPj"/>
+                            <constraint firstItem="8vt-x1-tzV" firstAttribute="leading" secondItem="Eph-Aa-bWw" secondAttribute="leading" constant="20" id="MEi-a0-dWc"/>
+                            <constraint firstItem="Eph-Aa-bWw" firstAttribute="trailing" secondItem="bNC-9s-zdw" secondAttribute="trailing" constant="20" id="UFW-EZ-rKO"/>
+                            <constraint firstItem="wNB-oG-UPL" firstAttribute="top" secondItem="Eph-Aa-bWw" secondAttribute="top" constant="40" id="Ylv-OU-oV6"/>
+                            <constraint firstItem="wNB-oG-UPL" firstAttribute="leading" secondItem="Eph-Aa-bWw" secondAttribute="leading" constant="20" id="YsW-vu-ZJU"/>
+                            <constraint firstItem="46L-3Z-YJp" firstAttribute="centerX" secondItem="znf-qi-xng" secondAttribute="centerX" id="dnG-Ah-AVA"/>
+                            <constraint firstItem="46L-3Z-YJp" firstAttribute="top" secondItem="bNC-9s-zdw" secondAttribute="bottom" constant="76" id="fVh-Bg-LnX"/>
+                            <constraint firstItem="Eph-Aa-bWw" firstAttribute="trailing" secondItem="wNB-oG-UPL" secondAttribute="trailing" constant="20" id="mDg-vk-0t4"/>
+                            <constraint firstItem="bNC-9s-zdw" firstAttribute="leading" secondItem="Eph-Aa-bWw" secondAttribute="leading" constant="20" id="mDn-Of-ks5"/>
+                            <constraint firstItem="8vt-x1-tzV" firstAttribute="top" secondItem="46L-3Z-YJp" secondAttribute="bottom" constant="100" id="pbB-IR-CmQ"/>
+                            <constraint firstItem="bNC-9s-zdw" firstAttribute="top" secondItem="wNB-oG-UPL" secondAttribute="bottom" constant="10" id="x0R-Z4-aAz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Eph-Aa-bWw"/>
+                    </view>
+                    <connections>
+                        <outlet property="accountBalanceLabel" destination="bNC-9s-zdw" id="6ir-Nh-5pW"/>
+                        <outlet property="depositTextField" destination="46L-3Z-YJp" id="7y1-ku-Sed"/>
+                        <outlet property="userNameLabel" destination="wNB-oG-UPL" id="ndg-7a-YPA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O3n-dA-aTm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1769.5652173913045" y="118.52678571428571"/>
+        </scene>
         <!--User List-->
         <scene sceneID="nSK-8M-NwU">
             <objects>

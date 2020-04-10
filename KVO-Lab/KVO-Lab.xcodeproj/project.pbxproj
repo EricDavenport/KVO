@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5810B4DF2440DF620014877D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5810B4DE2440DF620014877D /* AccountViewController.swift */; };
 		58E82EF4243D4AAE00F0E14B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E82EF3243D4AAE00F0E14B /* AppDelegate.swift */; };
 		58E82EF6243D4AAE00F0E14B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E82EF5243D4AAE00F0E14B /* SceneDelegate.swift */; };
 		58E82EF8243D4AAE00F0E14B /* CreateNewUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E82EF7243D4AAE00F0E14B /* CreateNewUserController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5810B4DE2440DF620014877D /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		58E82EF0243D4AAE00F0E14B /* KVO-Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KVO-Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E82EF3243D4AAE00F0E14B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58E82EF5243D4AAE00F0E14B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				58E82F09243D4F0500F0E14B /* UserInfoController.swift */,
 				58E82F0B243D4F2700F0E14B /* User.swift */,
 				58E82EF9243D4AAE00F0E14B /* Main.storyboard */,
+				5810B4DE2440DF620014877D /* AccountViewController.swift */,
 				58E82EFC243D4AAE00F0E14B /* Assets.xcassets */,
 				58E82EFE243D4AAE00F0E14B /* LaunchScreen.storyboard */,
 				58E82F01243D4AAE00F0E14B /* Info.plist */,
@@ -149,6 +152,7 @@
 			files = (
 				58E82F0A243D4F0500F0E14B /* UserInfoController.swift in Sources */,
 				58E82EF8243D4AAE00F0E14B /* CreateNewUserController.swift in Sources */,
+				5810B4DF2440DF620014877D /* AccountViewController.swift in Sources */,
 				58E82F0C243D4F2700F0E14B /* User.swift in Sources */,
 				58E82EF4243D4AAE00F0E14B /* AppDelegate.swift in Sources */,
 				58E82F08243D4EE200F0E14B /* DepositController.swift in Sources */,
