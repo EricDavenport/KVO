@@ -26,7 +26,7 @@ import UIKit
 
 // Dog class (Class being observed) - will have a property to be observed
 @objc class Dog: NSObject {         // Dog is KVO-compliant
-  var name : String
+  @objc dynamic var name : String
   @objc dynamic var age : Int               // age is observable property
   init(name: String, age: Int) {
     self.name = name
@@ -42,11 +42,13 @@ class DogWalker {
   let dog : Dog
 //  similar to listener registeration in firebase
   var birthdayObservation : NSKeyValueObservation?      // handle - i.e age on the (let dog : Dog )
+  var nameObservation : NSKeyValueObservation?
 //  e.g listenerRegistration : ListenerRegistration?
   init(dog: Dog) {
 //  \.dog is keyPath syntax for KVO
     self.dog = dog
     configureBirthdayObservation()
+    configureNameObservation()
   }
   
   
@@ -59,6 +61,13 @@ class DogWalker {
       print("Hey \(dog.name), happy \(age) birthday from the dog walker")
       print("dogWalker oldValue: \(oldAge)")
       print("dogWalker newValue: \(age)\n")
+    })
+  }
+  
+  private func configureNameObservation() {
+    nameObservation = dog.observe(\.name, options: [.old, .new], changeHandler: { (dog, change) in
+      guard let newName = change.newValue else { return }
+      print("Hey \(newName), I see you changed your name from \(dog.name)")
     })
   }
 }
@@ -93,7 +102,7 @@ let dogGroomer = DogGroomer(dog: snoopy)
 let dogWalker = DogWalker(dog: snoopy)
 
 snoopy.age += 1 // increment from 5 to 6
-
+snoopy.name = "New Snoopy"
 
 
 // notes for self
