@@ -28,7 +28,7 @@ class UserInfoController: UIViewController {
   
   private func loadTableView() {
     userObservation = UserObject.shared.observe(\.users, options: [.new], changeHandler: { [weak self] (user, change) in
-      print("inside of observer")
+      print("inside of UserInfoController observer")
       guard let newUsers = change.newValue else { return }
       self?.users = newUsers
     })

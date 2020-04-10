@@ -46,4 +46,10 @@ import Foundation
     return user
   }
   
+  @discardableResult
+  public func updateWallet(user: User, newValue: Int) -> User? {
+    user.walletAmount = newValue
+    return user
+  }
+  
 }
