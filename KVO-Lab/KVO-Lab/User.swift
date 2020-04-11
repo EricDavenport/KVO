@@ -49,7 +49,16 @@ import Foundation
   @discardableResult
   public func updateWallet(user: User, newValue: Int) -> User? {
     user.walletAmount = newValue
+//    UserObject.shared.users.append(user)
+    var users = UserObject.shared.users
+    users.first(where: { $0.name == user.name })?.walletAmount = newValue
     return user
   }
   
 }
+
+
+/*
+ array.first(where: { $0.eventID == id })?.added = value
+ array.filter {$0.eventID == id}.first?.added = value
+ */

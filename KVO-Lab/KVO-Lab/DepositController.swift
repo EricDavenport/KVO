@@ -31,6 +31,10 @@ class DepositController: UIViewController {
     })
     
   }
+  
+  deinit {
+    depositObservation?.invalidate()
+  }
 }
 
 

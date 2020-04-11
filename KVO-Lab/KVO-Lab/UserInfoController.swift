@@ -22,13 +22,13 @@ class UserInfoController: UIViewController {
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(true)
-    loadTableView()
+//    loadTableView()
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.dataSource = self
-//    loadTableView()
+    loadTableView()
   }
   
   private func loadTableView() {
@@ -39,6 +39,10 @@ class UserInfoController: UIViewController {
     })
     
   }
+  
+//  deinit {
+//    userObservation?.invalidate()
+//  }
   
 }
 
@@ -56,6 +60,8 @@ extension UserInfoController : UITableViewDataSource {
     cell.detailTextLabel?.text = "Account balance: $\(user.walletAmount).00"
     return cell
   }
+  
+
   
   
 }
